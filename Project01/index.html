@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <title>Home</title>
+  </head>
+  <body>
+    <div class="content">
+      <header>
+        <h1>Our Solar System</h1>
+        <div id="buttons">
+          <button class="button-30" role="button"><a href="#">Home</a></button>
+          |
+          <button class="button-30" role="button">
+            <a href="./claculator/index.html">Calculator</a>
+          </button>
+          |
+          <button class="button-30" role="button">
+            <a href="./asteroidChildish/index.html">Game</a>
+          </button>
+          |
+          <button class="button-30" role="button">
+            <a href="./todo/index.html">To do</a>
+          </button>
+          |
+        </div>
+      </header>
+      <main>
+        <h2>Introduction</h2>
+        <div id="firstDiv">
+          <p class="text">
+            Our planetary system is called “the solar system” because we use the
+            word “solar” to describe things related to our star, after the Latin
+            word for Sun, "solis." Our planetary system is located in an outer
+            spiral arm of the Milky Way galaxy. Our solar system consists of our
+            star, the Sun, and everything bound to it by gravity – the planets
+            Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune;
+            dwarf planets such as Pluto; dozens of moons; and millions of
+            asteroids, comets, and meteoroids. Beyond our own solar system, we
+            have discovered thousands of planetary systems orbiting other stars
+            in the Milky Way.
+          </p>
+        </div>
+        <h2>The JPL</h2>
+        <div id="jplDiv">
+          <iframe
+            src="https://eyes.nasa.gov/apps/orrery/#/home"
+            width="500px"
+            height="500px"
+            frameborder="0"
+          ></iframe>
+        </div>
+        <br />
+        <h2>Planets</h2>
+        <div id="planets">
+          <div class="card">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/c/cb/The_Blue_Marble_%28remastered%29.jpg"
+              alt="Earth"
+            />
+            <h2>
+              <a class="a" href="./planetsPages/earth/index.html">Earth</a>
+            </h2>
+          </div>
+          <div class="card">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Tharsis_and_Valles_Marineris_-_Mars_Orbiter_Mission_%2830055660701%29.png"
+              alt="Mars"
+            />
+            <h2>
+              <a class="a" href="./planetsPages/mars/index.html">Mars</a>
+            </h2>
+          </div>
+          <div class="card">
+            <img
+              src="data:image/jpeg;base64,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"
+              alt="Venus"
+            />
+            <h2>
+              <a class="a" href="./planetsPages/venus/index.html">Venus</a>
+            </h2>
+          </div>
+          <div class="card">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Uranus_as_seen_by_NASA%27s_Voyager_2_%28remastered%29_-_JPEG_converted.jpg"
+              alt="Uranus"
+            />
+            <h2>
+              <a class="a" href="./planetsPages/uranus/index.html">Uranus</a>
+            </h2>
+          </div>
+          <div class="card">
+            <img
+              src="https://space-facts.com/wp-content/uploads/saturn-v2.jpg"
+              alt="Saturn"
+            />
+            <h2>
+              <a class="a" href="./planetsPages/saturn/index.html">Saturn</a>
+            </h2>
+          </div>
+          <div class="card">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Jupiter%27s_swirling_colourful_clouds.jpg"
+              alt="Jupiter"
+            />
+            <h2>
+              <a class="a" href="./planetsPages/jupiter/index.html">Jupiter</a>
+            </h2>
+          </div>
+          <div class="card">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Mercury_in_true_color.jpg/800px-Mercury_in_true_color.jpg"
+              alt="Mercury"
+            />
+            <h2>
+              <a class="a" href="./planetsPages/mercury/index.html">Mercury</a>
+            </h2>
+          </div>
+          <div class="card">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/6/63/Neptune_-_Voyager_2_%2829347980845%29_flatten_crop.jpg"
+              alt="Neptune"
+            />
+            <h2>
+              <a class="a" href="./planetsPages/neptune/index.html">Neptune</a>
+            </h2>
+          </div>
+        </div>
+        <br /><br />
+      </main>
+    </div>
+    <footer>
+      <img
+        class="img2"
+        id="logo"
+        src="https://www.solarsystemscope.com/spacepedia/images/handbook/renders/sun.png"
+        alt="Logo"
+      />
+      <div>
+        <p class="contact"><a href="tel:+37495101507">+374 (95) 10-15-07</a></p>
+        <p class="contact">
+          <a href="mailto:tigranedikmkrtchyan@gmail.com"
+            >tigranedikmkrtchyan@gmail.com</a
+          >
+        </p>
+      </div>
+      <div id="icons">
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/455/455705.png"
+          alt="Phone number"
+        />
+        <img
+          src="https://tehnoblog.org/wp-content/uploads/2019/01/Viber-App-Logo-1600x1600.png"
+          alt="Viber"
+        />
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/479px-WhatsApp.svg.png"
+          alt="Whatsapp"
+        />
+        <img
+          src="https://icons-for-free.com/download-icon-google+mail+icon-1320192249286867468_512.png"
+          alt="gmail"
+        />
+      </div>
+    </footer>
+  </body>
+</html>

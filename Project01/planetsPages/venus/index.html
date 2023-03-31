@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Venus</title>
+  </head>
+  <body>
+    <header>
+      <h1>Venus</h1>
+      <div id="buttons">
+        <button class="button-30" role="button">
+          <a href="../../index.html">Home</a>
+        </button>
+        |
+        <button class="button-30" role="button">
+          <a href="../../claculator/index.html">Calculator</a>
+        </button>
+        |
+        <button class="button-30" role="button">
+          <a href="../../asteroidChildish/index.html">Game</a>
+        </button>
+        |
+        <button class="button-30" role="button">
+          <a href="../../todo/index.html">To do</a>
+        </button>
+        |
+      </div>
+    </header>
+    <br />
+    <main>
+      <div>
+        <h2>About Venus</h2>
+        <p class="text">
+          Venus is the second planet from the Sun and is Earth’s closest
+          planetary neighbor. It’s one of the four inner, terrestrial (or rocky)
+          planets, and it’s often called Earth’s twin because it’s similar in
+          size and density. These are not identical twins, however – there are
+          radical differences between the two worlds. Venus has a thick, toxic
+          atmosphere filled with carbon dioxide and it’s perpetually shrouded in
+          thick, yellowish clouds of sulfuric acid that trap heat, causing a
+          runaway greenhouse effect. It’s the hottest planet in our solar
+          system, even though Mercury is closer to the Sun. Surface temperatures
+          on Venus are about 900 degrees Fahrenheit (475 degrees Celsius) – hot
+          enough to melt lead. The surface is a rusty color and it’s peppered
+          with intensely crunched mountains and thousands of large volcanoes.
+          Scientists think it’s possible some volcanoes are still active. Venus
+          has crushing air pressure at its surface – more than 90 times that of
+          Earth – similar to the pressure you'd encounter a mile below the ocean
+          on Earth. Another big difference from Earth – Venus rotates on its
+          axis backward, compared to most of the other planets in the solar
+          system. This means that, on Venus, the Sun rises in the west and sets
+          in the east, opposite to what we experience on Earth. (It’s not the
+          only planet in our solar system with such an oddball rotation – Uranus
+          spins on its side.)
+        </p>
+      </div>
+      <br />
+      <div id="container">
+        <div class="div" id="slider">
+          <button id="left" onclick="changePic('notDefined', 'left')"></button>
+          <img id="img" src="" alt="img" />
+          <button
+            id="right"
+            onclick="changePic('notDefined', 'right')"
+          ></button>
+          <br />
+          <input type="radio" name="i" onchange="changePic(0)" id="inp0" />
+          <input type="radio" name="i" onchange="changePic(1)" id="inp1" />
+          <input type="radio" name="i" onchange="changePic(2)" id="inp2" />
+          <input type="radio" name="i" onchange="changePic(3)" id="inp3" />
+          <input type="radio" name="i" onchange="changePic(4)" id="inp4" />
+          <input type="radio" name="i" onchange="changePic(5)" id="inp5" />
+          <input type="radio" name="i" onchange="changePic(6)" id="inp6" />
+        </div>
+        <div class="div">
+          <input
+            type="range"
+            id="speed"
+            min="10"
+            max="5000"
+            step="1"
+            value="1500"
+            onchange="changeSpeed()"
+          />
+        </div>
+        <div class="div">
+          <button id="play" onclick="play()" class="button-30" role="button">
+            Play
+          </button>
+          <button id="pause" onclick="pause()" class="button-30" role="button">
+            Pause
+          </button>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="index.js"></script>
+</html>

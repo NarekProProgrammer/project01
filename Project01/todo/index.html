@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>To do list</title>
+    <style type="text/css">
+      table,
+      th,
+      td {
+        padding: 10px;
+        border: 1px solid black;
+        border-collapse: collapse;
+        background-color: #232323;
+      }
+      #div0 {
+        text-align: center;
+        background-color: #232323;
+        height: 170px;
+        border-radius: 10px;
+      }
+      h1 {
+        text-align: center;
+      }
+      body {
+        color: #ffffff;
+        background: #232323;
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff,
+          0 0 20px #49ff18, 0 0 30px #49ff18, 0 0 40px #49ff18, 0 0 55px #49ff18,
+          0 0 75px #49ff18;
+      }
+      .div {
+        -webkit-box-shadow: 0px 0px 0px 5px #a0a0a0,
+          inset 0px 10px 27px -8px #141414, inset 0px -10px 27px -8px #a31925,
+          5px 5px 15px 5px rgba(0, 0, 0, 0);
+        box-shadow: 0px 0px 0px 5px #a0a0a0, inset 0px 10px 27px -8px #141414,
+          inset 0px -10px 27px -8px #a31925, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+      }
+      #div1 {
+        width: auto;
+      }
+      #container {
+        display: flex;
+        justify-content: center;
+      }
+      .button-33 {
+        background-color: #c2fbd7;
+        border-radius: 100px;
+        box-shadow: rgba(44, 187, 99, 0.2) 0 -25px 18px -14px inset,
+          rgba(44, 187, 99, 0.15) 0 1px 2px, rgba(44, 187, 99, 0.15) 0 2px 4px,
+          rgba(44, 187, 99, 0.15) 0 4px 8px, rgba(44, 187, 99, 0.15) 0 8px 16px,
+          rgba(44, 187, 99, 0.15) 0 16px 32px;
+        color: green;
+        cursor: pointer;
+        display: inline-block;
+        font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto,
+          sans-serif;
+        padding: 7px 20px;
+        text-align: center;
+        text-decoration: none;
+        transition: all 250ms;
+        border: 0;
+        font-size: 16px;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+      }
+
+      .button-33:hover {
+        box-shadow: rgba(44, 187, 99, 0.35) 0 -25px 18px -14px inset,
+          rgba(44, 187, 99, 0.25) 0 1px 2px, rgba(44, 187, 99, 0.25) 0 2px 4px,
+          rgba(44, 187, 99, 0.25) 0 4px 8px, rgba(44, 187, 99, 0.25) 0 8px 16px,
+          rgba(44, 187, 99, 0.25) 0 16px 32px;
+        transform: scale(1.05) rotate(-1deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div0" class="div">
+      <h1>Notes</h1>
+      <input type="text" id="nam" />
+      <button onclick="addNotes()" class="button-33" role="button">Add</button
+      ><br /><br />
+      <button onclick="save()" class="button-33" role="button">Save</button>
+      <button onclick="paste()" class="button-33" role="button">Fill in</button>
+    </div>
+    <br />
+    <br />
+    <div id="container">
+      <div id="div1" class="div">
+        <table id="table">
+          <tr>
+            <th>Text</th>
+            <th>Time and Date</th>
+            <th></th>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript">
+    let i = 0;
+    let ids = [];
+    function addNotes() {
+      var text = document.getElementById("nam").value;
+      var table = document.getElementById("table");
+      var note = document.createElement("tr");
+      i++;
+      note.id = `note${i}`;
+      var data = new Date();
+      var hour = data.getHours();
+      var minute = data.getMinutes();
+      var day = data.getDate();
+      var month = data.getMonth() + 1;
+      var year = data.getFullYear();
+      var time = `${year}/${month}/${day}, ${hour}:${minute}`;
+      ids.push(note.id);
+      note.innerHTML = `<th onclick="change('${note.id}')">${text}</th><th>${time}</th><th><button onclick="document.getElementById('${note.id}').remove();">X</button></th>`;
+      table.append(note);
+    }
+    function change(id) {
+      if (document.getElementById(id).style.textDecoration === "none") {
+        document.getElementById(id).style.textDecoration = "line-through";
+      } else {
+        document.getElementById(id).style.textDecoration = "none";
+      }
+    }
+    function save() {
+      var table = {};
+      ids.forEach((el) => {
+        console.log(el);
+        let current = document.getElementById(el).innerHTML;
+        table[el] = current;
+      });
+      localStorage.setItem("table", JSON.stringify(table));
+      localStorage.setItem("i", i);
+    }
+    function paste() {
+      var table = JSON.parse(localStorage.getItem("table"));
+      for (let id in table) {
+        let current = document.createElement("tr");
+        current.innerHTML = table[id];
+        current.id = id;
+        document.getElementById("table").append(current);
+        ids.push(id);
+      }
+      i = localStorage.getItem("i");
+    }
+  </script>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <script src="index.js"></script>
+    <title>Starship Game</title>
+  </head>
+  <body>
+    <h1>Catch the starship!</h1>
+    <br />
+    <main>
+      <div id="container">
+        <div id="space">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/2072/2072130.png"
+            alt="Planet"
+            id="planet"
+          />
+        </div>
+      </div>
+      <p id="hit">Press Space to summon a starship</p>
+      <p id="flew"></p>
+      <ul>
+        <li onclick="earth()">Earth</li>
+        <li onclick="saturn()">Saturn</li>
+        <li onclick="venus()">Venus</li>
+        <li onclick="mercury()">Mercury</li>
+        <li onclick="jupiter()">Jupiter</li>
+        <li onclick="neptun()">Neptun</li>
+        <li onclick="uran()">Uran</li>
+        <li onclick="mars()">Mars</li>
+      </ul>
+    </main>
+  </body>
+</html>

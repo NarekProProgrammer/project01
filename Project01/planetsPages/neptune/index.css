@@ -1,0 +1,148 @@
+body {
+    background: #232323;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: bold;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+header {
+    background-color: #ffffe3;
+}
+
+.button-30 {
+    align-items: center;
+    appearance: none;
+    background-color: #FCFCFD;
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #36395A;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono", monospace;
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s, transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow, transform;
+    font-size: 18px;
+}
+
+.button-30:focus {
+    box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+.button-30:hover {
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    transform: translateY(-2px);
+}
+
+.button-30:active {
+    box-shadow: #D6D6E7 0 3px 7px inset;
+    transform: translateY(2px);
+}
+body {
+    background: #232323;
+    font-family: "Rajdhani", sans-serif;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.div {
+    text-align: center;
+    background-color: gray;
+    width: 30%;
+}
+
+img {
+    margin-top: 10px;
+    max-width: 300px;
+    max-height: 300px;
+}
+
+#left,
+#right {
+    margin-top: 10px;
+    height: 200px;
+    width: 20px;
+}
+
+#left {
+    margin-left: 10px;
+    float: left;
+}
+
+#right {
+    margin-right: 10px;
+    float: right;
+}
+
+#play,
+#pause {
+    margin-bottom: 5px;
+}
+
+#fast,
+#slow {
+    margin-bottom: 5px;
+}
+
+img {
+    border: 5px outset #242424;
+}
+main{
+    display: flex;
+    flex-direction: column;
+}
+#container {
+    display: block;
+    margin-left: 10px;
+    width: 1500px;
+}
+h2 {
+    background-color: #ffffe3;
+    text-align: center;
+}
+
+.text {
+    background-color: #FCFCFD;
+    padding: 3px;
+    flex-grow: 3;
+    font-size: 25px;
+    font-family: 'Zen Tokyo Zoo', cursive;
+    color: rgba(0, 0, 0, 0.6);
+    text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.2), 0px -5px 35px rgba(255, 255, 255, 0.3);
+}
+
+footer>img,
+#icons>img {
+    border: none;
+}
+h2,
+h1 {
+    font-weight: lighter;
+}

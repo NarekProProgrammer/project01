@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Mars</title>
+  </head>
+  <body>
+    <header>
+      <h1>Mars</h1>
+      <div id="buttons">
+        <button class="button-30" role="button">
+          <a href="../../index.html">Home</a>
+        </button>
+        |
+        <button class="button-30" role="button">
+          <a href="../../claculator/index.html">Calculator</a>
+        </button>
+        |
+        <button class="button-30" role="button">
+          <a href="../../asteroidChildish/index.html">Game</a>
+        </button>
+        |
+        <button class="button-30" role="button">
+          <a href="../../todo/index.html">To do</a>
+        </button>
+        |
+      </div>
+    </header>
+    <br />
+    <main>
+      <div>
+        <h2>About Mars</h2>
+        <p class="text">
+          ​Mars is the fourth planet from the Sun – a dusty, cold, desert world
+          with a very thin atmosphere. Mars is also a dynamic planet with
+          seasons, polar ice caps, canyons, extinct volcanoes, and evidence that
+          it was even more active in the past. Mars is one of the most explored
+          bodies in our solar system, and it's the only planet where we've sent
+          rovers to roam the alien landscape. NASA currently has two rovers
+          (Curiosity and Perseverance), one lander (InSight), and one helicopter
+          (Ingenuity) exploring the surface of Mars. Perseverance rover – the
+          largest, most advanced rover NASA has sent to another world – touched
+          down on Mars on Feb. 18, 2021, after a 203-day journey traversing 293
+          million miles (472 million kilometers). The Ingenuity helicopter rode
+          to Mars attached to the belly of Perseverance. Perseverance is one of
+          three spacecraft that arrived at Mars in 2021. The Hope orbiter from
+          the United Arab Emirates arrived on Feb. 9, 2021. China’s Tianwen-1
+          mission arrived on Feb. 10, 2021, and includes an orbiter, a lander,
+          and a rover. Europe and India also have spacecraft studying Mars from
+          orbit. In May 2021, China became the second nation to ever land
+          successfully on Mars when its Zhurong Mars rover touched down. An
+          international fleet of eight orbiters is studying the Red Planet from
+          above including three NASA orbiters: 2001 Mars Odyssey, Mars
+          Reconnaissance Orbiter, and MAVEN. These robotic explorers have found
+          lots of evidence that Mars was much wetter and warmer, with a thicker
+          atmosphere, billions of years ago.
+        </p>
+      </div>
+      <br />
+      <div id="container">
+        <div class="div" id="slider">
+          <button id="left" onclick="changePic('notDefined', 'left')"></button>
+          <img id="img" src="" alt="img" />
+          <button
+            id="right"
+            onclick="changePic('notDefined', 'right')"
+          ></button>
+          <br />
+          <input type="radio" name="i" onchange="changePic(0)" id="inp0" />
+          <input type="radio" name="i" onchange="changePic(1)" id="inp1" />
+          <input type="radio" name="i" onchange="changePic(2)" id="inp2" />
+          <input type="radio" name="i" onchange="changePic(3)" id="inp3" />
+          <input type="radio" name="i" onchange="changePic(4)" id="inp4" />
+          <input type="radio" name="i" onchange="changePic(5)" id="inp5" />
+          <input type="radio" name="i" onchange="changePic(6)" id="inp6" />
+        </div>
+        <div class="div">
+          <input
+            type="range"
+            id="speed"
+            min="10"
+            max="5000"
+            step="1"
+            value="1500"
+            onchange="changeSpeed()"
+          />
+        </div>
+        <div class="div">
+          <button id="play" onclick="play()" class="button-30" role="button">
+            Play
+          </button>
+          <button id="pause" onclick="pause()" class="button-30" role="button">
+            Pause
+          </button>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="index.js"></script>
+</html>

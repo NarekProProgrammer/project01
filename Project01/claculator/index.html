@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Cosmic gravity</title>
+  </head>
+  <body>
+    <div class="calc-box">
+      <h2>Cosmic gravity calculator</h2>
+      <form>
+        <div class="user-box">
+          <input type="number" id="m1" required="true" />
+          <label>Mass1</label>
+        </div>
+        <div class="user-box">
+          <input type="number" id="m2" required="true" />
+          <label>Mass2</label>
+        </div>
+        <div class="user-box">
+          <input type="number" id="r" required="true" />
+          <label>Radius</label>
+        </div>
+        <div class="user-box">
+          <input type="number" id="G" required="true" />
+          <label>Cosmic Constant</label>
+        </div>
+        <div class="user-box">
+          <input type="text" id="F" required="true" readonly />
+        </div>
+        <a href="#" onclick="calculate()">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          Calculate
+        </a>
+      </form>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>

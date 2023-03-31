@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Saturn</title>
+  </head>
+  <body>
+    <header>
+      <h1>Saturn</h1>
+      <div id="buttons">
+        <button class="button-30" role="button">
+          <a href="../../index.html">Home</a>
+        </button>
+        |
+        <button class="button-30" role="button">
+          <a href="../../claculator/index.html">Calculator</a>
+        </button>
+        |
+        <button class="button-30" role="button">
+          <a href="../../asteroidChildish/index.html">Game</a>
+        </button>
+        |
+        <button class="button-30" role="button">
+          <a href="../../todo/index.html">To do</a>
+        </button>
+        |
+      </div>
+    </header>
+    <br />
+    <main>
+      <div>
+        <h2>About Saturn</h2>
+        <p class="text">
+          Saturn is the sixth planet from the Sun and the second-largest planet
+          in our solar system. Adorned with thousands of beautiful ringlets,
+          Saturn is unique among the planets. It is not the only planet to have
+          rings – made of chunks of ice and rock – but none are as spectacular
+          or as complicated as Saturn's. Like fellow gas giant Jupiter, Saturn
+          is a massive ball made mostly of hydrogen and helium.
+        </p>
+      </div>
+      <br />
+      <div id="container">
+        <div class="div" id="slider">
+          <button id="left" onclick="changePic('notDefined', 'left')"></button>
+          <img id="img" src="" alt="img" />
+          <button
+            id="right"
+            onclick="changePic('notDefined', 'right')"
+          ></button>
+          <br />
+          <input type="radio" name="i" onchange="changePic(0)" id="inp0" />
+          <input type="radio" name="i" onchange="changePic(1)" id="inp1" />
+          <input type="radio" name="i" onchange="changePic(2)" id="inp2" />
+          <input type="radio" name="i" onchange="changePic(3)" id="inp3" />
+          <input type="radio" name="i" onchange="changePic(4)" id="inp4" />
+          <input type="radio" name="i" onchange="changePic(5)" id="inp5" />
+          <input type="radio" name="i" onchange="changePic(6)" id="inp6" />
+        </div>
+        <div class="div">
+          <input
+            type="range"
+            id="speed"
+            min="10"
+            max="5000"
+            step="1"
+            value="1500"
+            onchange="changeSpeed()"
+          />
+        </div>
+        <div class="div">
+          <button id="play" onclick="play()" class="button-30" role="button">
+            Play
+          </button>
+          <button id="pause" onclick="pause()" class="button-30" role="button">
+            Pause
+          </button>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="index.js"></script>
+</html>
